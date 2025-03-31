@@ -38,12 +38,13 @@ body{
         margin-right: 10px;
         border-bottom: 10px;
         text-decoration: none;
+        font-size: 20px;
     
     }
 
     .container{
         background-color:gainsboro ;
-        background-image: url("Fathers.jpg");
+        background-image: url("/images/Fathers.jpg");
         color:white;
         height: 50%;
         background-position: center;
