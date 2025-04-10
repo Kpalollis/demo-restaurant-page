@@ -44,7 +44,7 @@ body{
 
     .container{
         background-color:gainsboro ;
-        background-image: url("/images/Fathers.jpg");
+        background-image: url("Fathers.jpg");
         color:white;
         height: 50%;
         background-position: center;
