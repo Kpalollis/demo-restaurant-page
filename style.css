@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: gainsboro;
     }
@@ -43,16 +49,16 @@ body{
     }
 
     .container{
-        background-color:gainsboro ;
+        background-color:gainsboro;
         background-image: url("Fathers.jpg");
         color:white;
-        height: 50%;
+        height: 200px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position:relative;
-
-
+        max-width: 1800px;
+        border-radius: 7px;
     }
     
     section {
@@ -64,10 +70,15 @@ body{
     article{
         display: flex;
         flex-direction: column;
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         background-color: blanchedalmond;
         border-radius: 10px;
-
+        gap: 10px;
+        padding: 20px;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 400px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     }
     
@@ -94,7 +105,7 @@ body{
         text-align: left;
     }
     
-    article > button {
+    article > a {
         background-color: blanchedalmond;
         color: #2781d6;
         padding: 10px 15px;
@@ -103,7 +114,12 @@ body{
         cursor: pointer;
         margin-top: 90px;
         text-align: left;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
     }
+    
+   
     
     .foot{
         display: flex;
