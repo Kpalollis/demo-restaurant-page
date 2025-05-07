@@ -50,13 +50,14 @@ li{
 
 
 
- .container{
-    width: 100px;
-    height: 100vh;
+ .section{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    padding-left: 400px;
-
+    color:white;
+}
+.box{
+    max-width: 600px;
+    margin-left: 615px;
+    margin-bottom: -200px;
 }
