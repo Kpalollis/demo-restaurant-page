@@ -41,3 +41,22 @@ li{
      text-decoration: none;
  
  }
+.hero{
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;}
+
+
+
+ .container{
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-left: 400px;
+
+}
