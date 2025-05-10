@@ -17,7 +17,7 @@ nav ul{
     text-align: center;
     background-color: grey;
     border-radius: 20px;
-    height: 30px;
+    height: 40px;
     margin: 0 auto;
     padding: 0;
     padding-top: 10px;
@@ -39,6 +39,7 @@ li{
      margin-right: 10px;
      border-bottom: 10px;
      text-decoration: none;
+      font-size: 20px;
  
  }
 .hero{
@@ -58,13 +59,11 @@ li{
 }
 .box{
     max-width: 600px;
-    margin-left: 615px;
+    margin-left: 780px;
     margin-bottom: -200px;
 }
 
-.iframe{
-    width: 100%;
-    height: 500px;
-    border: none;
-    margin-left: 20px;
+.iframe-container{
+    margin-left: 150px;
 }
+
