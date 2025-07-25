@@ -71,7 +71,8 @@ li{
   max-width: 800px;
   width: 100%;
   background-color: gainsboro;
-  padding: 100px 300px;
+  padding: 100px 350px;
+  border-radius: 10px;
  
 }
 .container .title {
@@ -138,7 +139,7 @@ form .category label .dot {
   width: 18px;
   border-radius: 50%;
   margin-right: 10px;
-  background: #d9d9d9;
+  background: #bebaba;
   border: 5px solid transparent;
   transition: all 0.3s ease;
 }
