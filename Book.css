@@ -1,104 +1,102 @@
-body{
-    /* Book page specific styles */
-    .book-page .hero {
-      text-align: center;
-      padding: 40px 20px;
-    }
+/* Book page styles (validated) */
 
-    .contact-map {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+.book-page .hero {
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    .contact {
-      background: blanchedalmond;
-      padding: 20px;
-      border-radius: 8px;
-    }
+.book-page .hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.2rem;
+}
 
-    .map .map-wrapper {
-      width: 100%;
-      height: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-    .map iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
+.book-page .hero p {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+}
 
-    .booking-form {
-      max-width: 800px;
-      margin: 20px auto 60px;
-      padding: 0 20px;
-    }
+.map-book {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: start;
+}
 
-    .form-card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    }
+.map-book .map {
+  order: 1;
+}
 
-    .form-card h2 {
-      margin: 0 0 12px 0;
-    }
+.map-book .booking-form {
+  order: 2;
+}
 
-    .form-card form label {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-    }
+.map .map-wrapper {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+}
 
-    .form-card .row {
-      display: flex;
-      gap: 12px;
-    }
-    .form-card .row label {
-      flex: 1;
-    }
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
-    .form-card input[type="text"],
-    .form-card input[type="email"],
-    .form-card input[type="tel"],
-    .form-card input[type="date"],
-    .form-card input[type="time"],
-    .form-card select,
-    .form-card textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
-    }
+.booking-form {
+  width: 100%;
+}
 
-    .actions {
-      text-align: right;
-      margin-top: 10px;
-    }
+.form-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
 
-    .actions button {
-      background: #2781d6;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-    }
+.form-card h2 { margin: 0 0 12px 0; }
 
-    /* small screens */
-    @media (max-width: 800px) {
-      .contact-map {
-        grid-template-columns: 1fr;
-      }
-      .form-card .row {
-        flex-direction: column;
-      }
-    }
+.form-card form label { display: block; margin-bottom: 10px; font-size: 0.95rem; }
+
+.form-card .row { display: flex; gap: 12px; }
+.form-card .row label { flex: 1; }
+
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="tel"],
+.form-card input[type="date"],
+.form-card input[type="time"],
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.actions { text-align: right; margin-top: 10px; }
+
+.actions button {
+  background: #2781d6;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
+
+.contact-card { background: blanchedalmond; padding: 20px; border-radius: 8px; }
+
+@media (max-width: 800px) {
+  .map-book { grid-template-columns: 1fr; }
+  .form-card .row { flex-direction: column; }
+}
