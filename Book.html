@@ -1,109 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Book.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Table - Little Lemon</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Book.css" />
+  </head>
+  <body>
     <header>
-        <img src="Asset 14@4x.png"><br>
+      <img src="./images/asset14.png" alt="Little Lemon logo" />
     </header>
+
     <nav>
-        <ul>
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Menu.html">Menu</a></li>
-        <li><a href="Book.html">Book</a></li>
-       
-        </ul>
+        <li><a href="Book.html" class="active">Book</a></li>
+      </ul>
     </nav>
-    <div class="hero">
+
+    <main class="book-page">
+      <section class="hero">
         <h1>Book a Table</h1>
-        <p>Reserve your spot at our restaurant</p>
-    </div> <br /> <br /> <br /> <br /> <br />
+        <p>Reserve your spot at Little Lemon — fast and easy.</p>
+      </section>
 
-    
-<section>
-    <div class="box">
-        <h2>Little Lemon</h2>
-        <p>Address: Αγίου δημητρίου</p>
-        <p>Phone: 2109486366</p>
-    </div>
-    <div class="iframe-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8410.566083560092!2d23.634544231018783!3d37.96420622935801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sel!2sgr!4v1746633717992!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</section>
-
-
-<div class="container">
-    <!-- Title section -->
-    <div class="title">Registration</div>
-    <div class="content">
-      <!-- Registration form -->
-      <form action="#">
-        <div class="user-details">
-          <!-- Input for Full Name -->
-          <div class="input-box">
-            <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
-          </div>
-          <!-- Input for Username -->
-          <div class="input-box">
-            <span class="details">Username</span>
-            <input type="text" placeholder="Enter your username" required>
-          </div>
-          <!-- Input for Email -->
-          <div class="input-box">
-            <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
-          </div>
-          <!-- Input for Phone Number -->
-          <div class="input-box">
-            <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
-          </div>
-          <!-- Input for Password -->
-          <div class="input-box">
-            <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
-          </div>
-          <!-- Input for Confirm Password -->
-          <div class="input-box">
-            <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required>
+      <section class="contact-map">
+        <div class="contact">
+          <h2>Contact & Location</h2>
+          <p><strong>Address:</strong> Αγίου Δημητρίου</p>
+          <p><strong>Phone:</strong> 2109486366</p>
+          <p><strong>Opening Hours:</strong> Mon–Sun 14:00–23:00</p>
+        </div>
+        <div class="map">
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8410.566083560092!2d23.634544231018783!3d37.96420622935801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sel!2sgr!4v1746633717992!5m2!1sel!2sgr"
+              style="border:0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
-        <div class="gender-details">
-          <!-- Radio buttons for gender selection -->
-          <input type="radio" name="gender" id="dot-1">
-          <input type="radio" name="gender" id="dot-2">
-          <input type="radio" name="gender" id="dot-3">
-          <span class="gender-title">Gender</span>
-          <div class="category">
-            <!-- Label for Male -->
-            <label for="dot-1">
-              <span class="dot one"></span>
-              <span class="gender">Male</span>
-            </label>
-            <!-- Label for Female -->
-            <label for="dot-2">
-              <span class="dot two"></span>
-              <span class="gender">Female</span>
-            </label>
-            <!-- Label for Prefer not to say -->
-            <label for="dot-3">
-              <span class="dot three"></span>
-              <span class="gender">Prefer not to say</span>
-            </label>
-          </div>
+      </section>
+
+      <section class="booking-form">
+        <div class="form-card">
+          <h2>Reserve a table</h2>
+          <form action="#" method="post">
+            <div class="row">
+              <label>Full name<input type="text" name="name" required /></label>
+              <label>Email<input type="email" name="email" required /></label>
+            </div>
+            <div class="row">
+              <label>Phone<input type="tel" name="phone" required /></label>
+              <label>Guests
+                <select name="guests">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5+</option>
+                </select>
+              </label>
+            </div>
+            <div class="row">
+              <label>Date<input type="date" name="date" required /></label>
+              <label>Time<input type="time" name="time" required /></label>
+            </div>
+            <label>Notes<textarea name="notes" rows="3" placeholder="Any requests (optional)"></textarea></label>
+            <div class="actions">
+              <button type="submit">Book now</button>
+            </div>
+          </form>
         </div>
-        <!-- Submit button -->
-        <div class="button">
-          <input type="submit" value="Register">
-        </div>
-      </form>
-    </div>
-  </div>
-</body>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <div class="foot">
+        <img src="./images/asset7.png" alt="Little Lemon footer logo" />
+        <p>Copyright Little Lemon</p>
+      </div>
+    </footer>
+  </body>
 </html>
