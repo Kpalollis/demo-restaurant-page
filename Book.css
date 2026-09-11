@@ -101,6 +101,36 @@
 .contact-card { background: #e0e0e0; padding: 20px; border-radius: 8px; }
 
 @media (max-width: 800px) {
-  .map-book { grid-template-columns: 1fr; }
+  .book-page .hero {
+    padding: 28px 16px 18px;
+  }
+
+  .book-page .hero h1 {
+    font-size: 2rem;
+  }
+
+  .map-book {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 12px;
+  }
+
+  .map .map-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+
   .form-card .row { flex-direction: column; }
+
+  .form-card {
+    padding: 16px;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .contact {
+    margin: 16px auto;
+    padding: 0 12px;
+  }
 }

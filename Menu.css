@@ -93,6 +93,13 @@
 @media (max-width: 640px) {
   .menu-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 18px;
+    padding: 0 12px 28px;
+  }
+
+  .menu-hero {
+    padding: 28px 16px 4px;
   }
 
   .menu-hero h1 {
@@ -101,5 +108,13 @@
 
   .menu-hero p {
     font-size: 0.98rem;
+  }
+
+  .menu-card img {
+    height: 180px;
+  }
+
+  .menu-info {
+    padding: 16px 14px 18px;
   }
 }
