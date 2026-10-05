@@ -4,8 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-ink: #263b2c;
+    --color-leaf: #31513b;
+    --color-leaf-hover: #43674d;
+    --color-citrus: #f4ce14;
+    --color-coral: #bd6046;
+    --color-page: #f1f5ee;
+    --color-surface: #ffffff;
+    --color-soft: #e5ede2;
+    --color-muted: #58645b;
+    --color-border: #d8e2d7;
+}
+
 body{
-    background-color: gainsboro;
+    background-color: var(--color-page);
+    color: var(--color-ink);
     overflow-x: hidden;
 }
 header > img {
@@ -24,40 +38,45 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    background-color: #5f5f5f;
-    border-radius: 28px;
+    gap: 6px;
+    background-color: var(--color-leaf);
+    border-radius: 16px;
     margin: 0 auto;
-    padding: 14px 16px;
-    width: min(100%, 980px);
+    padding: 8px;
+    width: min(100%, 560px);
     max-width: 100%;
 }
-    li {
-       display: inline-flex;
-       flex: 0 1 auto;
-    }
-    li:hover a {
-        background-color: rgba(255, 255, 255, 0.12);
-        transition: 0.3s;
-    }
-    li a {
-        color: white;
-        padding: 10px 18px;
-        text-decoration: none;
-        font-size: 18px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        min-width: 100px;
-    }
-    li a.active {
-        background-color: #424242;
-    }
+nav li {
+    display: flex;
+    flex: 0 1 auto;
+}
+nav a {
+    color: white;
+    padding: 11px 22px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 112px;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+nav a:hover {
+    background-color: var(--color-leaf-hover);
+}
+nav a[aria-current="page"] {
+    background-color: var(--color-citrus);
+    color: var(--color-ink);
+    font-weight: 700;
+}
+nav a:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 2px;
+}
 
     .container{
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(28, 55, 37, 0.3);
         background-image: url("./images/Fathers.jpg");
         color:white;
         min-height: 240px;
@@ -76,7 +95,7 @@ nav ul {
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(28, 55, 37, 0.52);
         pointer-events: none;
     }
     .container .text {
@@ -92,7 +111,7 @@ nav ul {
     .container p {
         font-size: 1rem;
         line-height: 1.7;
-        color: #f1f1f1;
+        color: #f1f5ee;
         max-width: 760px;
     }
     
@@ -110,21 +129,21 @@ nav ul {
         display: flex;
         flex-direction: column;
         font-size: 1rem;
-        background-color: #fff;
+        background-color: var(--color-surface);
         border-radius: 14px;
         gap: 14px;
         padding: 20px;
         margin: 0;
         flex: 1 1 calc(33.333% - 20px);
         max-width: 380px;
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e6e6e6;
+        box-shadow: 0 12px 24px rgba(38, 59, 44, 0.08);
+        border: 1px solid var(--color-border);
     }
     
     .dishes article > h1 {
         font-size: 1.5rem;
         margin: 0;
-        color: #222;
+        color: var(--color-leaf);
     }
     
     .dishes article > img {
@@ -138,12 +157,12 @@ nav ul {
     .dishes article > p {
         font-size: 0.95rem;
         text-align: left;
-        color: #444;
+        color: var(--color-muted);
     }
     
     .dishes article > a {
-        background-color: #f4f0d9;
-        color: #2781d6;
+        background-color: var(--color-citrus);
+        color: var(--color-ink);
         padding: 12px 16px;
         border:none;
         border-radius: 8px;
@@ -154,6 +173,11 @@ nav ul {
         font-weight: 700;
         font-size: 1rem;
         width: fit-content;
+        transition: background-color 160ms ease, color 160ms ease;
+    }
+    .dishes article > a:hover {
+        background-color: var(--color-leaf);
+        color: white;
     }
     
    
@@ -181,23 +205,22 @@ nav ul {
         padding: 10px 12px;
     }
     nav ul {
-        gap: 10px;
-        padding: 12px 12px;
-        flex-direction: column;
-        align-items: stretch;
+        gap: 4px;
+        padding: 6px;
+        flex-direction: row;
+        align-items: center;
         width: 100%;
     }
-    li {
-        flex: 1 1 auto;
-        width: 100%;
+    nav li {
+        flex: 1 1 0;
+        min-width: 0;
     }
-    li a {
-        font-size: 18px;
-        padding: 16px 18px;
+    nav a {
+        font-size: 15px;
+        padding: 12px 6px;
         width: 100%;
-        display: inline-flex;
-        justify-content: center;
-        border-radius: 14px;
+        min-width: 0;
+        border-radius: 10px;
     }
     header > img {
         max-width: 280px;
@@ -221,7 +244,9 @@ nav ul {
         margin-top: 12px;
     }
     .dishes article {
+        flex: 1 1 100%;
         width: 100%;
+        max-width: 100%;
         padding: 18px;
     }
     .dishes article > img {
